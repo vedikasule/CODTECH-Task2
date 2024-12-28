@@ -55,3 +55,6 @@ Dataset:
 The dataset includes details of customer transactions, such as demographics, product types, quantities, prices, and total amounts.
 
 OUTPUT:
+
+![Screenshot (142)](https://github.com/user-attachments/assets/88f5308c-33ef-44c3-be51-104de65f5384)
+![Screenshot (143)](https://github.com/user-attachments/assets/91c3ee07-87c0-4e3f-a095-8a2157b387f3)
