@@ -57,6 +57,7 @@ Evaluate the model using metrics like Mean Squared Error (MSE) and R-squared (RÂ
 
 
 
+
 TECHNOLOGIES USED:
 
 Python Libraries:
@@ -81,70 +82,9 @@ Dataset:
 
 The dataset includes details of customer transactions, such as demographics, product types, quantities, prices, and total amounts.
 
+
 CODE
 
-import numpy as np
-
-import matplotlib.pyplot as plt
-
-from sklearn.model_selection import train_test_split
-
-from sklearn.linear_model import LinearRegression
-
-import matplotlib.pyplot as plt
-
-df=pd.read_csv('retail_sales_dataset.csv')
-
-print(df)
-
-x = data[['Age', 'Gender', 'Product Category', 'Quantity', 'Price per Unit']]  # Features
-
-y = data['Total Amount']
-
-x = pd.get_dummies(x, drop_first=True)
-
-X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
-
-print(X_train, X_test, y_train, y_test)
-
-X_train = X_train[['Age']]  # Select 'Age' as the feature
-
-X_test = X_test[['Age']]
-
-model= LinearRegression()
-
-#Train the model on the training data
-
-model.fit(X_train, y_train)
-
-y_pred = model.predict(X_test)
-
-#Make predictions using the test data
-
-y_pred = model.predict(X_test)
-
-plt.scatter(X_test, y_test, color='b', label='Actual Data')
-
-plt.plot(X_test, y_pred, color='r', label='Regression Line')
-
-plt.xlabel('Age')
-
-plt.ylabel('Total Amount')
-
-plt.legend()
-
-plt.show()
-
-
-from sklearn.metrics import mean_squared_error, r2_score
-
-mse= mean_squared_error(y_test,y_pred)
-
-r2= r2_score(y_test,y_pred)
-
-print(f"Mean Squared Error:{mse:.2f}")
-
-print(f"R_squared:{r2:.2f}")
 
 ![image](https://github.com/user-attachments/assets/53328aa5-8ae8-4a33-91b1-06649c8b54dd)
 
